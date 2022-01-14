@@ -22,6 +22,10 @@ file.close()
 from os import path
 from pydub import AudioSegment
 
+# # If error in pydub Audio Segment saying ffmpeg not installed
+# sudo apt update
+# sudo apt install ffmpeg
+
 # files                                                                         
 src = "output.mp3"
 dst = "output.wav"
