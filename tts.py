@@ -14,5 +14,16 @@ output.save("output.mp3")
 
 file.close()
 
-os.system("start output.mp3")
+# To play audio
+# os.system("output.mp3")
 
+from os import path
+from pydub import AudioSegment
+
+# files                                                                         
+src = "output.mp3"
+dst = "output.wav"
+
+# convert wav to mp3                                                            
+sound = AudioSegment.from_mp3(src)
+sound.export(dst  , format="wav")
